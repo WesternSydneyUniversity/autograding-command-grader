@@ -8,6 +8,9 @@ inputs:
   setup-command:
     description: "Command to execute prior to the test, typically for environment setup or dependency installation."
     required: false
+  working-directory:
+    description: "Which is the working directory in which you execute tests."
+    required: false
   command:
     description: "Primary command to run for the test. A zero exit code signifies a successful test."
     required: true
