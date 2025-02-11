@@ -43,8 +43,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Run Autograding Tests
-      uses: education/autograding-command-grader@v1
+      uses: education/autograding-command-grader@v2
+      env: 
+        VARIABLE: value
       with:
+        working-directory: './src'
         test-name: 'Test Name'
         setup-command: 'npm install'
         command: 'npm test'
