@@ -52,7 +52,7 @@ function run() {
   const command = core.getInput('command', {required: true})
   const timeout = parseFloat(core.getInput('timeout') || 10) * 60000 // Convert to minutes
   const maxScore = parseInt(core.getInput('max-score') || 0)
-  const workingDirectory = core.getInput('working-directory')
+  const workingDirectory = core.getInput('working-directory') || "."
 
   const processEnv = {
     ...process.env,
