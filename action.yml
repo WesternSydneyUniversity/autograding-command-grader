@@ -21,10 +21,17 @@ inputs:
   max-score:
     description: "Maximum points awarded upon a successful test."
     required: false
+  sectionId: # id of input
+    description: "Url Id of the section to report"
+    required: true
+    default: ""
+  courseId: # id of input
+    description: "Url Id of the course to report"
+    required: true
+    default: ""
 outputs:
   result:
     description: "Outputs the result of the grader, indicating the success or failure of the test."
 runs:
-  using: 'node20'
-  main: 'dist/main.js'
-
+  using: "node20"
+  main: "dist/main.js"
